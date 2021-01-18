@@ -83,6 +83,7 @@ Promise.resolve()
 	}) // }}}
 	.then(()=> program.from && process.chdir(program.from)) // Move to from dir if specified
 	.then(()=> glob(program.glob))
+	.then(items => items.length ? items : Promise.reject('No files found'))
 	.then(items => items.map(item => ({ // Remap file paths into {pathFrom<String>, rule<RegExpResult>}
 		pathFrom: item,
 		rule: rules.find(rule => rule.from.test(item)),
