@@ -1,0 +1,35 @@
+{
+  "name": "dubdub",
+  "version": "0.0.0",
+  "description": "Mass renaming script for very large media files",
+  "main": "app.js",
+  "bin": {
+    "dubdub": "./app.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=14.8.0"
+  },
+  "keywords": [
+    "cli",
+    "automation",
+    "renaming"
+  ],
+  "author": "Matt Carter <m@ttcarter.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@momsfriendlydevco/template": "^1.1.2",
+    "commander": "^6.2.1",
+    "commander-extras": "^1.1.3",
+    "globby": "^11.0.2"
+  },
+  "devDependencies": {
+    "@momsfriendlydevco/exec": "^1.5.2",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
